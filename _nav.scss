@@ -1,0 +1,26 @@
+.nav {
+  height: 10vh;
+  @media (max-width: 500px) {
+    display: none;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    li {
+      display: flex;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: #8d8d8d;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+    li:first-child a {
+      color: #000000;
+    }
+  }
+}

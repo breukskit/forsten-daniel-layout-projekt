@@ -1,0 +1,79 @@
+.hero {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas:
+    "main-content side-content-top"
+    "main-content side-content-bottom";
+  @include hero;
+
+  .hero-left {
+    grid-area: main-content;
+    background: #c7ddea;
+    position: relative;
+    .left-text-content {
+      width: 90%;
+      margin: auto;
+      @include left-text-content;
+      h1 {
+        margin-top: 4rem;
+        font-family: "Frank ruhl black";
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        @include left-text-content-h1;
+      }
+      p {
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        @include left-text-content-p;
+        span {
+          color: #ffffff;
+        }
+      }
+      a {
+        font-size: 1.2rem;
+        @media (max-width: 500px) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    img {
+      padding-right: 1rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 330px;
+      @include img;
+    }
+  }
+  .hero-right-top {
+    grid-area: side-content-top;
+    background: #f17949;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      @media (max-width: 500px) {
+        padding: 3rem 0rem 1.5rem 0rem;
+        margin: 0;
+      }
+    }
+    h3 {
+      font-size: 2rem;
+      font-family: "Frank ruhl libre black";
+      font-weight: 900;
+      color: #ffffff;
+    }
+    @media (max-width: 500px) {
+      padding-bottom: 3rem;
+    }
+  }
+  .hero-right-bottom {
+    @extend .hero-right-top;
+    grid-area: side-content-bottom;
+    background: #fab131;
+  }
+}

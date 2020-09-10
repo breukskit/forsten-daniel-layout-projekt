@@ -1,0 +1,51 @@
+@import "reset";
+
+@import "media-queries";
+
+$btn-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+$btn-radius: 100px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Fira sans regular";
+  src: url("./fonts/Fira_Sans/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Frank ruhl libre regular";
+  src: url("./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Frank ruhl libre black";
+  src: url("./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Black.ttf");
+}
+
+body {
+  font-family: "Fira sans regular";
+  background: #ebebeb;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition: all 200ms;
+  box-shadow: $btn-shadow;
+  &:hover {
+    background-color: darken(#ffffff, 5%);
+    transform: scale(1.05);
+  }
+}
+
+@import "hero";
+@import "nav";
