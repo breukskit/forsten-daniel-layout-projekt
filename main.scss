@@ -1,6 +1,6 @@
-@import "reset";
+@import 'reset';
 
-@import "media-queries";
+@import 'media-queries';
 
 $btn-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
 $btn-radius: 100px;
@@ -9,25 +9,25 @@ $btn-radius: 100px;
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-  font-family: "Fira sans regular";
-  src: url("./fonts/Fira_Sans/FiraSans-Regular.ttf");
+  font-family: 'Fira sans regular';
+  src: url('./fonts/Fira_Sans/FiraSans-Regular.ttf');
+  font-family: 'Fira sans bold';
+  src: url('./fonts/Fira_Sans/FiraSans-Bold.ttf');
 }
 
 @font-face {
-  font-family: "Frank ruhl libre regular";
-  src: url("./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Frank ruhl libre black";
-  src: url("./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Black.ttf");
+  font-family: 'Frank ruhl libre bold';
+  src: url('./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Bold.ttf');
+  font-family: 'Frank ruhl libre black';
+  src: url('./fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Black.ttf');
 }
 
 body {
-  font-family: "Fira sans regular";
+  font-family: 'Fira sans regular';
   background: #ebebeb;
 }
 
@@ -47,5 +47,12 @@ body {
   }
 }
 
-@import "hero";
-@import "nav";
+h1 {
+  font-family: 'Frank ruhl libre black';
+}
+
+@import 'hero';
+@import 'nav';
+@import 'body';
+@import 'how-it-works';
+@import 'footer';

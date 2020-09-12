@@ -1,0 +1,57 @@
+.how-it-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 766px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      font-family: 'Frank ruhl libre black';
+      font-size: 2rem;
+      color: rgba(0, 0, 0, 0.4);
+      letter-spacing: -0.02rem;
+    }
+    p {
+      text-align: center;
+      max-width: 90%;
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Fira sans bold';
+    }
+  }
+
+  .box-one {
+    background-color: #c7ddea;
+    h2 {
+      font-family: 'Frank ruhl libre black';
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.8);
+      letter-spacing: -0.02rem;
+      text-align: center;
+      max-width: 90%;
+    }
+  }
+  .box-two {
+    background: #ffffff;
+  }
+  .box-four {
+    background: #ffffff;
+  }
+  .box-five {
+    background: #f17949;
+  }
+  .box-six {
+    background: #ffffff;
+  }
+}

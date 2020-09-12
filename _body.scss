@@ -1,0 +1,117 @@
+.body {
+  min-height: 120vh;
+  .body-top {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: #a9a19e;
+    min-height: 75vh;
+    @include body-top;
+
+    .body-top-left {
+      width: 90%;
+      margin: 4rem auto;
+      @include body-top-left;
+      h1 {
+        font-size: 4rem;
+        color: #ffffff;
+        margin-bottom: 3rem;
+        @include body-top-left-h1;
+      }
+      a {
+        @media (max-width: 766px) {
+          display: none;
+        }
+      }
+    }
+    .body-top-right {
+      width: 90%;
+      margin: 4rem auto;
+      @media (max-width: 766px) {
+        margin: 0 auto;
+        text-align: center;
+      }
+      p {
+        line-height: 2rem;
+        font-family: 'Fira sans bold';
+        color: rgba(0, 0, 0, 0.6);
+        @media (max-width: 766px) {
+          width: 90%;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .body-bottom {
+    background-color: #fab131;
+    min-height: 80vh;
+    @media (max-width: 766px) {
+      min-height: auto;
+    }
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      transform: translateY(-25%);
+      @include card-container;
+      .card {
+        background-color: #ffffff;
+        max-width: 25%;
+        min-width: 230px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        @include card;
+        img {
+          display: block;
+          width: 90%;
+          max-width: 330px;
+          margin: auto;
+          transform: translateY(-10%);
+          @media (max-width: 766px) {
+            max-width: 420px;
+          }
+        }
+        .card-body {
+          padding: 1rem;
+          h4 {
+            font-family: 'Frank ruhl libre bold';
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: rgba(0, 0, 0, 0.9);
+          }
+          p {
+            text-align: center;
+            line-height: 1.75rem;
+            font-family: 'Fira sans bold';
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    .body-bottom-text {
+      transform: translateY(-20%);
+      padding-top: 1.5rem;
+      @include body-bottom-text;
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 2rem;
+      }
+      p {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        line-height: 1.75rem;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Fira sans bold';
+        @media (max-width: 766px) {
+          width: 85%;
+        }
+      }
+      .paragraph-one {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

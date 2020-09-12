@@ -1,0 +1,17 @@
+.footer {
+  background: #a9a19e;
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem;
+    a {
+      color: rgba(0, 0, 0, 0.75);
+      font-family: 'Fira sans bold';
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
