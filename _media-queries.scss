@@ -55,9 +55,9 @@
   }
   @media (max-width: 500px) {
     max-height: auto;
-    position: static;
+    position: relative;
     padding: 0;
-    bottom: 0;
+    bottom: -6px;
     display: block;
     margin: auto;
   }

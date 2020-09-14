@@ -35,7 +35,7 @@
       a {
         position: relative;
         z-index: 2;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 1.5rem;
         @media (max-width: 500px) {
           margin-bottom: 2rem;
@@ -45,10 +45,10 @@
     img {
       padding-right: 1rem;
       position: absolute;
-      bottom: 0;
+      bottom: -8px;
       right: 0;
       height: 330px;
-      z-index: 1;
+      z-index: 0;
       @include img;
     }
   }
@@ -86,5 +86,6 @@
     @extend .hero-right-top;
     grid-area: side-content-bottom;
     background: #fab131;
+    z-index: 2;
   }
 }
