@@ -15,12 +15,21 @@
       a {
         text-decoration: none;
         color: #8d8d8d;
-        font-weight: 600;
+        font-family: 'Fira sans bold';
         font-size: 1.1rem;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: #000000;
+        }
       }
     }
-    li:first-child a {
+    .selected-link {
       color: #000000;
     }
   }
+}
+
+.nav-about {
+  @extend .nav;
+  background: #ffffff;
 }

@@ -188,9 +188,9 @@ body {
 }
 
 .container {
-  padding: 0% 5%;
+  padding: 0% 8%;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1140px) {
   .container {
     padding: 0;
   }
@@ -272,10 +272,11 @@ h1 {
   margin-bottom: 2rem;
   font-family: "Fira sans bold";
   color: rgba(0, 0, 0, 0.75);
+  z-index: 5;
 }
 @media (max-width: 766px) {
   .hero .hero-left .left-text-content p {
-    width: 70%;
+    width: 65%;
     line-height: 1.75rem;
   }
 }
@@ -298,6 +299,7 @@ h1 {
   position: relative;
   z-index: 2;
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 500px) {
   .hero .hero-left .left-text-content a {
@@ -314,11 +316,13 @@ h1 {
 }
 @media (max-width: 766px) {
   .hero .hero-left img {
+    max-height: 250px;
     height: auto;
   }
 }
 @media (max-width: 500px) {
   .hero .hero-left img {
+    max-height: auto;
     position: static;
     padding: 0;
     bottom: 0;
@@ -333,6 +337,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 766px) {
+  .hero .hero-right-top, .hero .hero-right-bottom {
+    min-height: 315px;
+  }
 }
 .hero .hero-right-top p, .hero .hero-right-bottom p {
   margin-bottom: 1rem;
@@ -362,33 +371,41 @@ h1 {
   background: #fab131;
 }
 
-.nav {
+.nav, .nav-about {
   height: 10vh;
 }
 @media (max-width: 500px) {
-  .nav {
+  .nav, .nav-about {
     display: none;
   }
 }
-.nav ul {
+.nav ul, .nav-about ul {
   display: flex;
   justify-content: space-around;
   height: 100%;
   width: 80%;
   margin: auto;
 }
-.nav ul li {
+.nav ul li, .nav-about ul li {
   display: flex;
   align-items: center;
 }
-.nav ul li a {
+.nav ul li a, .nav-about ul li a {
   text-decoration: none;
   color: #8d8d8d;
-  font-weight: 600;
+  font-family: "Fira sans bold";
   font-size: 1.1rem;
+  transition: all 200ms ease-in-out;
 }
-.nav ul li:first-child a {
+.nav ul li a:hover, .nav-about ul li a:hover {
   color: #000000;
+}
+.nav ul .selected-link, .nav-about ul .selected-link {
+  color: #000000;
+}
+
+.nav-about {
+  background: #ffffff;
 }
 
 .body {
@@ -406,6 +423,7 @@ h1 {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 1rem;
+    padding-top: 2rem;
   }
 }
 .body .body-top .body-top-left {
@@ -556,8 +574,8 @@ h1 {
 @media (max-width: 766px) {
   .body .body-bottom .body-bottom-text {
     transform: translateY(0);
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 7.5rem;
   }
 }
 .body .body-bottom .body-bottom-text h1 {
@@ -603,6 +621,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 766px) {
+  .how-it-works .box {
+    min-height: 170px;
+  }
 }
 .how-it-works .box h4 {
   position: absolute;
@@ -660,6 +683,216 @@ h1 {
 }
 .footer p a:hover {
   text-decoration: underline;
+}
+.footer .footer-bottom-space {
+  background-color: #777574;
+  min-height: 15rem;
+}
+
+.about-header {
+  background: #c7ddea;
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 920px) {
+  .about-header {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+}
+.about-header h1 {
+  font-size: 4rem;
+}
+@media (max-width: 920px) {
+  .about-header h1 {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 766px) {
+  .about-header h1 {
+    font-size: 3rem;
+    max-width: 90%;
+  }
+}
+.about-header img {
+  position: absolute;
+  right: 5rem;
+  bottom: 0;
+}
+@media (max-width: 920px) {
+  .about-header img {
+    position: static;
+  }
+}
+
+.contact {
+  height: 544px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #a9a19e;
+}
+@media (max-width: 766px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 3rem 0rem;
+  }
+}
+.contact .contact-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-left h2 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-family: "Frank ruhl libre black";
+}
+@media (max-width: 920px) {
+  .contact .contact-left h2 {
+    text-align: center;
+    max-width: 90%;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 766px) {
+  .contact .contact-left h2 {
+    padding-bottom: 2rem;
+  }
+}
+.contact .contact-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 400px) {
+  .contact .contact-right form {
+    align-items: center;
+  }
+}
+.contact .contact-right form p {
+  font-family: "Fira sans bold";
+  color: #ffffff;
+  opacity: 0.7;
+  padding-bottom: 0.5rem;
+}
+.contact .contact-right form input {
+  min-width: 334px;
+  height: 40px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+@media (max-width: 766px) {
+  .contact .contact-right form input {
+    min-width: auto;
+    max-width: 90%;
+  }
+}
+.contact .contact-right form a {
+  align-self: flex-end;
+  font-family: "Fira sans bold";
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 766px) {
+  .contact .contact-right form a {
+    align-self: center;
+  }
+}
+.contact .contact-right form textarea {
+  outline: none;
+  margin-bottom: 2rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2px;
+  min-width: 334px;
+  height: 166px;
+  resize: none;
+}
+@media (max-width: 766px) {
+  .contact .contact-right form textarea {
+    min-width: auto;
+    max-width: 90%;
+  }
+}
+
+.map {
+  min-height: 407px;
+  background-image: url("./img/map.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 766px) {
+  .map {
+    flex-direction: column;
+  }
+}
+.map .map-text-content {
+  position: absolute;
+  top: 2.8rem;
+  left: 5rem;
+  background-color: #fab131;
+  width: 20rem;
+  height: 13rem;
+  color: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  letter-spacing: -0.02rem;
+}
+@media (max-width: 920px) {
+  .map .map-text-content {
+    position: static;
+    margin: 0rem 2rem 2rem 0rem;
+  }
+}
+@media (max-width: 766px) {
+  .map .map-text-content {
+    margin: 0rem 0rem 2rem 0rem;
+    max-width: 90%;
+  }
+}
+.map .map-text-content h2 {
+  font-family: "Frank ruhl libre black";
+  font-size: 2.8rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 500px) {
+  .map .map-text-content h2 {
+    text-align: center;
+  }
+}
+.map .map-text-content p {
+  color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 0.5rem;
+  font-family: "Fira sans bold";
+}
+@media (max-width: 500px) {
+  .map .map-text-content p {
+    text-align: center;
+  }
+}
+
+.about-footer {
+  min-height: 340px;
+  background-color: #777574;
 }
 
 /*# sourceMappingURL=main.css.map */

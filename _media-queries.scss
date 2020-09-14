@@ -35,7 +35,7 @@
 
 @mixin left-text-content-p {
   @media (max-width: 766px) {
-    width: 70%;
+    width: 65%;
     line-height: 1.75rem;
   }
   @media (max-width: 627px) {
@@ -50,9 +50,11 @@
 
 @mixin img {
   @media (max-width: 766px) {
+    max-height: 250px;
     height: auto;
   }
   @media (max-width: 500px) {
+    max-height: auto;
     position: static;
     padding: 0;
     bottom: 0;
@@ -67,6 +69,7 @@
     flex-direction: column;
     min-height: auto;
     padding-bottom: 1rem;
+    padding-top: 2rem;
   }
 }
 
@@ -125,7 +128,7 @@
   }
   @media (max-width: 766px) {
     transform: translateY(0);
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 7.5rem;
   }
 }

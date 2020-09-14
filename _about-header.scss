@@ -1,0 +1,31 @@
+.about-header {
+  background: #c7ddea;
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 920px) {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  h1 {
+    font-size: 4rem;
+    @media (max-width: 920px) {
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+    @media (max-width: 766px) {
+      font-size: 3rem;
+      max-width: 90%;
+    }
+  }
+  img {
+    position: absolute;
+    right: 5rem;
+    bottom: 0;
+    @media (max-width: 920px) {
+      position: static;
+    }
+  }
+}

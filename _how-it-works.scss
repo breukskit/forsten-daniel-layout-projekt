@@ -13,6 +13,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 766px) {
+      min-height: 170px;
+    }
     h4 {
       position: absolute;
       top: 0;

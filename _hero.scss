@@ -26,6 +26,7 @@
         margin-bottom: 2rem;
         font-family: 'Fira sans bold';
         color: rgba(0, 0, 0, 0.75);
+        z-index: 5;
         @include left-text-content-p;
         span {
           color: #ffffff;
@@ -35,6 +36,7 @@
         position: relative;
         z-index: 2;
         font-size: 1.2rem;
+        margin-bottom: 1.5rem;
         @media (max-width: 500px) {
           margin-bottom: 2rem;
         }
@@ -57,6 +59,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 766px) {
+      min-height: 315px;
+    }
     p {
       margin-bottom: 1rem;
       font-size: 1.1rem;
