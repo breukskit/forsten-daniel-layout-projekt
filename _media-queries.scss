@@ -71,6 +71,9 @@
     padding-bottom: 1rem;
     padding-top: 2rem;
   }
+  @media (min-width: 767px) and (max-width: 1000px) {
+    padding-bottom: 10rem;
+  }
 }
 
 @mixin body-top-left {
